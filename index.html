@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="starwars"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Starwars</title>
+  <meta name="description" content="Dashboard starwars">
+  <meta name="author" content="Gabriel Quadrado (in/gabrielquadrado)">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#fff">
+
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="bower_components/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="app/static/css/app.css">
+</head>
+<body>
+
+  <div class="sidebar" ng-include="'app/static/html/sidebar.html'"></div>
+  <div class="col-md-12 p-0 core">
+    <div class="col-md-12 navbar" ng-include="'app/static/html/navbar.html'"></div>
+    <div class="col-md-12" ng-view></div>
+  </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">Você está usando um <strong> navegador desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> para melhor compatibilidade e segurança.</p>
+  <![endif]-->
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="app/static/js/app.js"></script>
+  <script type="text/javascript" src="app/static/js/constants.js"></script>
+
+  <script type="text/javascript" src="app/dashboard/dashboardCtrl.js"></script>
+
+</body>
+</html>
