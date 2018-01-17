@@ -14,4 +14,4 @@ $ bower install
 
 **Observações:**
 
- - Aplicação multiplataforma acessível em: https://dashboard-starwars.herokuapp.com/dashboard
+ - Aplicação multiplataforma instanciada e acessível em: https://dashboard-starwars.herokuapp.com/dashboard
