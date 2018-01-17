@@ -1,10 +1,84 @@
 <div class="row dashboard">
-	<div class="col-md-12 page-section">
-		<span class="page-title">Dashboard</span>
-		<span class="page-path">Página inicial > Dashboard</span>
+	<div class="col-md-9 p-0">
+		<div class="col-md-4 card-container">
+			<div class="card col-md-12">
+				<div class="col-md-9 col-sm-12 text">
+					<span class="amount">30</span>
+					<span>Personagens principais</span>
+				</div>
+				<div class="col-md-3 image hidden-sm hidden-xs"><img src="app/static/img/vader.png"></div>
+			</div>
+		</div>
+		<div class="col-md-4 card-container">
+			<div class="card col-md-12">
+				<div class="col-md-3 col-sm-6 text">
+					<span class="amount">56</span>
+					<span>Planetas</span>
+				</div>
+				<div class="col-md-3 col-sm-6 image hidden-sm hidden-xs border"><img src="app/static/img/planet.png"></div>
+				<div class="col-md-2 col-md-offset-1 text">
+					<span class="amount">8</span>
+					<span>Luas</span>
+				</div>
+				<div class="col-md-3 image hidden-sm hidden-xs"><img src="app/static/img/moon.png"></div>
+			</div>
+		</div>
+		<div class="col-md-4 card-container">
+			<div class="card col-md-12">
+				<div class="col-md-9 col-sm-12 text">
+					<span class="amount">22</span>
+					<span>Naves super potentes</span>
+				</div>
+				<div class="col-md-3 image hidden-sm hidden-xs"><img src="app/static/img/ship.png"></div>
+			</div>
+		</div>
+		<div class="col-md-12 card-container">
+			<div class="card col-md-12">
+				<div class="col-md-12 card-header">
+					<img src="app/static/img/list.png">
+					<strong>Ficha dos personagens</strong>
+				</div>
+				<div class="col-md-12 p-0">
+					<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<th>Nome</th>
+							<th class="text-center">Altura</th>
+							<th class="text-center">Peso</th>
+							<th class="text-center">Cor do cabelo</th>
+							<th class="text-center">Ano de nascimento</th>
+							<th class="text-center">Planeta de nascimento</th>
+							<th class="text-center">Filmes que participa</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="person in people track by person.id">
+								<td><a href="{{ person.url }}" target="_blank">{{ person.name }}</a></td>
+								<td class="text-center">{{ person.height }}</td>
+								<td class="text-center">{{ person.mass }}</td>
+								<td class="text-center">{{ person.hair_color }}</td>
+								<td class="text-center">{{ person.birth_year }}</td>
+								<td class="text-center"><a href="{{ person.homeworld }}" target="_blank">{{ person.planet }}</a></td>
+								<td class="text-center">{{ person.films.length }}</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="col-md-3 bg-primary">1</div>
-	<div class="col-md-3 bg-danger">2</div>
-	<div class="col-md-3 bg-primary">3</div>
-	<div class="col-md-3 bg-danger">4</div>
+	<div class="col-md-3 card-container">
+		<div class="card chart">
+			<div class="col-md-12 card-header">
+				<img src="app/static/img/pie.png">
+				<strong>5 maiores bilheterias Star Wars</strong>
+			</div>
+			<hr>
+			<div google-chart chart="chart" class="chart-render"></div>
+		</div>
+	</div>
+	<div class="col-md-12 footer">
+		<hr>
+		Desafio dashboard - Star Wars | 2018
+	</div>
 </div>

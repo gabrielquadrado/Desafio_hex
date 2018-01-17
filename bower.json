@@ -23,6 +23,7 @@
     "font-awesome": "^4.7.0",
     "angular-sanitize": "^1.6.6",
     "angular-touch": "^1.6.6",
-    "angular-resource": "^1.6.6"
+    "angular-resource": "^1.6.6",
+    "angular-google-chart": "^0.1.0"
   }
 }

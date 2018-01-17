@@ -3,5 +3,5 @@
 angular.module('starwars')
 
 .constant('API', {
-    URL : 'https://swapi.co/api/'
+    URL : 'https://swapi.co/api'
 })

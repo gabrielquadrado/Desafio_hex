@@ -3,7 +3,8 @@
 
     angular
         .module('starwars', [
-            'ngRoute'
+            'ngRoute',
+            'googlechart'
         ])
 
     .config(function($routeProvider, $locationProvider) {

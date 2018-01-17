@@ -17,9 +17,13 @@
 </head>
 <body>
 
-  <div class="sidebar" ng-include="'app/static/html/sidebar.html'"></div>
+  <div class="sidebar hidden-xs" ng-include="'app/static/html/sidebar.html'"></div>
   <div class="col-md-12 p-0 core">
     <div class="col-md-12 navbar" ng-include="'app/static/html/navbar.html'"></div>
+    <div class="col-md-12 page-section">
+      <span class="page-title">Dashboard</span>
+      <span class="page-path">Página inicial > Dashboard</span>
+    </div>
     <div class="col-md-12" ng-view></div>
   </div>
 
@@ -33,6 +37,7 @@
   <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
   <script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-google-chart/ng-google-chart.min.js"></script>
 
   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   

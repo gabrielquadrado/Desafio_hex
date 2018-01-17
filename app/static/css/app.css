@@ -1,29 +1,57 @@
 @font-face{
-	font-family: 'Open Sans';
+	font-family: 'Open Sans Bold';
 	src: local('OpenSans Bold'), local('OpenSans-Bold'), url('../fonts/OpenSans-Bold.ttf') format('truetype');
 }
 /* latin-ext */
 @font-face{
-	font-family: 'Open Sans';
+	font-family: 'Open Sans ExtraBold';
 	src: local('OpenSans ExtraBold'), local('OpenSans-ExtraBold'), url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
 }
 /* latin-ext */
 @font-face{
-	font-family: 'Open Sans';
+	font-family: 'Open Sans Light';
 	src: local('OpenSans Light'), local('OpenSans-Light'), url('../fonts/OpenSans-Light.ttf') format('truetype');
 }
 /* latin-ext */
 @font-face{
-	font-family: 'Open Sans';
+	font-family: 'Open Sans Regular';
 	src: local('OpenSans Regular'), local('OpenSans-Regular'), url('../fonts/OpenSans-Regular.ttf') format('truetype');
 }
 html, body{
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #e3e3e3;
+	background-color: #eeeeee;
 	color: #777;
 	font-family: 'Open Sans', sans-serif !important;
+}
+div.core{
+	padding-left: 160px !important;
+}
+@media screen and (max-width: 1430px) {
+	div.row.dashboard div.card-container div.card div.text span{
+		font-size: 14px !important;
+		white-space: nowrap;
+	}
+	div.row.dashboard div.card-container div.card div.text span.amount{
+		font-size: 29px !important;
+	}
+	div.row.dashboard div.card-container div.card div.image img{
+		width: 37px !important;
+	}
+	div.row.dashboard div.card-container div.card{
+		padding: 10px !important;
+	}
+}
+@media screen and (max-width: 769px) {
+	div.core{
+		padding: 0 !important;
+	}
+}
+@media screen and (max-width: 992px) {
+	div.row.dashboard div.card-container div.card{
+		text-align: center;
+	}
 }
 .p-0{
 	padding: 0 !important;
@@ -38,11 +66,15 @@ div.text-error h1{
 	font-size: 210px;
 }
 div.sidebar{
-	position: absolute;
-	height: 100vh;
+	position: fixed;
+	top: 0;
+	left:  0;
+	height: 100%;
 	background-color: #191e2b;
 	text-align: center;
-	width: 180px;
+	font-size: 13px;
+	width: 160px;
+	z-index:  3;
 }
 div.sidebar img.logo{
 	margin-top: 20px;
@@ -55,28 +87,134 @@ div.sidebar div.menu-item{
 	min-height: 80px;
 	padding: 0;
 	line-height: 30px;
-	margin: 8px 0;
+	margin: 6px 0;
 	cursor: pointer;
-}
-div.core{
-	padding-left: 180px !important;
 }
 div.navbar{
 	background-color: #fff;
-	min-height: 50px;
+	height: 60px;
 	margin:  0;
+	padding:  0;
+	position:  fixed;
+	width:  100%;
+	left:  0;
+	top: 0;
+	z-index:  2;
 }
-div.row.dashboard div.page-section{
+div.navbar div.buttons{
+	line-height: 60px;
+}
+div.navbar div.buttons .envelope,
+div.navbar div.buttons .bell{
+	margin: 0 10px;
+	color:  #4b5160;
+	position:  relative;
+	cursor:  pointer;
+}
+div.navbar div.buttons div.amount{
+	background-color:  #ffbc27;
+	color: #fff;
+	position:  absolute;
+	padding:  1px;
+	top: 17px;
+	left: 8px;
+	width: 13px;
+	height: 13px;
+	text-align:  center;
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: bold;
+	border-radius:  50%;
+}
+div.navbar div.buttons .profile{
+	padding: 0 8px;
+	border-left: 1px solid #ececec;
+	border-right: 1px solid #ececec;
+	cursor:  pointer;
+	margin-left: 10px;
+}
+div.navbar div.buttons .profile img,
+div.navbar div.buttons .profile i{
+	margin: 0 6px;
+}
+div.navbar div.buttons .menu-icon{
+	cursor:  pointer;
+	font-size: 20px;
+	padding: 0 20px;
+}
+div.row.dashboard{
+	background-color: #eeeeee;
+	padding: 14px 5px;
+}
+div.row.dashboard div.card-container{
+	padding: 7px;
+}
+div.row.dashboard div.card-container div.card{
+	background-color: #fff;
+	padding: 10px 20px;
+	min-height: 80px;
+	-webkit-box-shadow: 0px 2px 12px 0px rgba(48, 50, 50, 0.07);
+	-moz-box-shadow:    0px 2px 12px 0px rgba(48, 50, 50, 0.07);
+	box-shadow:         0px 2px 12px 0px rgba(48, 50, 50, 0.07);
+	overflow:  hidden;
+}
+div.row.dashboard div.card-container div.card.chart{
+	min-height: 370px;
+}
+div.row.dashboard div.card-container div.card div.card-header{
+	padding: 3px 0 12px 0;
+	border-bottom: 2px solid #ececec;
+}
+div.row.dashboard div.card-container div.card div.text{
+	line-height: 25px;
+	padding: 10px 0;
+}
+div.row.dashboard div.card-container div.card div.text span{
+	display: block;
+	font-size: 18px;
+}
+div.row.dashboard div.card-container div.card div.text span.amount{
+	font-size: 32px;
+	line-height: 30px;
+	color: #e9a81e;
+	font-family:  Open Sans ExtraBold;
+}
+div.row.dashboard div.card-container div.card div.image{
+	display: block;
+	padding: 0;
+	line-height: 70px;
+	text-align:  center;
+}
+div.row.dashboard div.card-container div.card div.image.border{
+	border-right: 1px solid #e3e3e3;
+}
+div.row.dashboard div.card-container div.card div.image img{
+	width: 42px;
+}
+div.row.dashboard div.card-container div.card.chart hr{
+	margin: 15px 20px 0 20px;
+}
+div.row.dashboard div.card-container div.card.chart div.chart-render{margin-top: 25px;}
+div.row.dashboard div.card-container div.card table a{
+	color: #d19922;
+	text-decoration:  underline;
+}
+div.page-section{
 	padding: 10px 20px;
 	color: #5f5f5f;
+	background-color:  #e3e3e3;
+	margin-top:  60px;
 }
-div.row.dashboard div.page-section > span{
+div.page-section > span{
 	display: block;
 	line-height: 20px;
 }
-div.row.dashboard div.page-section > span.page-title{
+div.page-section > span.page-title{
 	font-size: 20px;
 }
-div.row.dashboard div.page-section > span.page-path{
+div.page-section > span.page-path{
 	font-size: 13px;
+}
+div.row.dashboard div.footer hr{
+	border-color: #cecece;
 }
