@@ -193,6 +193,12 @@ div.row.dashboard div.card-container div.card div.image img{
 div.row.dashboard div.card-container div.card.chart hr{
 	margin: 15px 20px 0 20px;
 }
+div.row.dashboard div.card-container div.card table{
+	border-bottom: 1px solid #ddd;
+}
+div.row.dashboard div.card-container div.card table td{
+	border-top: none;
+}
 div.row.dashboard div.card-container div.card.chart div.chart-render{margin-top: 25px;}
 div.row.dashboard div.card-container div.card table a{
 	color: #d19922;
