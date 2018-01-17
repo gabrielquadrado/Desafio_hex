@@ -1,4 +1,4 @@
-# SEED ANGULAR 1
+# Desafio de Front-end
 
 **How to run:**
 
@@ -10,3 +10,8 @@
 ```sh
 $ bower install
 ```
+
+
+**Observações:**
+
+ - Aplicação multiplataforma acessível em: https://dashboard-starwars.herokuapp.com/dashboard
