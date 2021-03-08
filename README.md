@@ -1,4 +1,4 @@
-# Desafio de Front-end
+# dash_starwars
 
 **How to run:**
 
